@@ -1,0 +1,138 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #a386c0;
+  background-size: cover;
+  background-position: center;
+  animation: fadeIn ease 1s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+h1 {
+  margin-top: 0;
+  color: #020202;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#webcam-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  border: 2px solid #040404;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+canvas {
+  width: 100%;
+  height: auto;
+}
+
+#label-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 2px;
+  border-color: #020202;
+  align-items: center;
+  color: #ffffff;
+}
+
+.prediction-bar {
+  width: 200px;
+  max-width: 100%;
+  height: 20px;
+  background-color: #ffffff;
+  margin-bottom: 5px;
+  border-width: 5px;
+  border-radius: 4px;
+  border-color: #000000;
+  overflow: hidden;
+  position: relative;
+}
+
+.prediction-value {
+  height: 100%;
+  background-color: #1e9b22;
+  border-radius: 4px;
+  transition: width 0.3s ease-in-out;
+}
+
+.percentage {
+  margin-left: 5px;
+  position: absolute;
+  right: 5px;
+  top: 0;
+  color: #000;
+  font-weight: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  animation: slideInRight 1s ease;
+  opacity: 0;
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.label-text {
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+footer {
+  margin-top: auto;
+  color: #020202;
+  font-size: 20px;
+  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+  text-align: center;
+  animation: slideInUp ease 1s;
+}
+
+@keyframes slideInUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.start-button {
+  background-color: #00544c;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  outline: none;
+}
+
+.start-button:hover {
+  background-color: #00796b;
+}
